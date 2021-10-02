@@ -1,3 +1,4 @@
+import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { GeistProvider, CssBaseline } from '@geist-ui/react'
 

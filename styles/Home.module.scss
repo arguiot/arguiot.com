@@ -1,0 +1,22 @@
+.header {
+	display: flex;
+	justify-content: center;
+	// align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	&::before {
+		content: '';
+		background: linear-gradient(0, rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
+		url(../public/img/header-white.jpg);
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.text {
+		font-size: 20px;
+		
+	}
+}
