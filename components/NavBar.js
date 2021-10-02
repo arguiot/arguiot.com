@@ -1,7 +1,6 @@
 import styles from '../styles/NavBar.module.scss'
 import { Link, Text, useModal } from '@geist-ui/react'
 import NextLink from 'next/link'
-import Image from 'next/image'
 import React from "react";
 
 function NavBar() {
