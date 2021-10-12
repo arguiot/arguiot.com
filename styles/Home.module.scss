@@ -4,19 +4,64 @@
 	// align-items: center;
 	flex-direction: column;
 	height: 100vh;
+	padding: 100px;
 	&::before {
 		content: '';
 		background: linear-gradient(0, rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
 		url(../public/img/header-white.jpg);
 		background-size: cover;
-		width: 100vw;
+		width: 50vw;
 		height: 100vh;
 		position: absolute;
 		top: 0;
-		left: 0;
+		right: 0;
+	}
+	.bubble {
+		content: '';
+		position: absolute;
+		top: calc(50vh - 490px / 2);
+		left: calc(50vw - 543px / 2);
+		transform-style: preserve-3d;
+		opacity: 0.5;
+		scale: 2;
+		will-change: transform, opacity;
+		background: url(https://uploads-ssl.webflow.com/5fa25266badbdb239c79ef86/60b186c0b5dadaad7d66fde0_webflow%20-%20shape%201.png);
+		width: 543px;
+		height: 490px;
+		animation: rotate 20s infinite;
+		filter: blur(20px);
 	}
 	.text {
 		font-size: 20px;
-		
+		width: calc(100vw - 200px);
+		max-width: 450px;
+	}
+}
+
+@media (max-width: 900px) {
+    .header {
+		padding: 20px;
+		.text {
+			width: calc(100vw - 40px);
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.header {
+		background-color: #000;
+	}
+	.header::before {
+		background: linear-gradient(0, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../public/img/header-black.jpg) !important;
+		background-size: cover !important;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		rotate: 0deg
+	}
+	100% {
+		rotate: 360deg;
 	}
 }

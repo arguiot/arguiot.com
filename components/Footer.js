@@ -26,7 +26,7 @@ export default function Footer() {
         <Grid xs={24} md={7}>
             <Divider />
             <Text h3>About</Text>
-            <Text small>Copyright © { new Date().getFullYear() } Pr1mer Tech.</Text>
+            <Text small>Copyright © { new Date().getFullYear() } Arthur Guiot & Pr1mer Tech.</Text>
         </Grid>
     </Grid.Container>
     </div>
