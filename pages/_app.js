@@ -1,10 +1,9 @@
 import '../styles/globals.scss'
-import type { AppProps } from 'next/app'
 import { GeistProvider, CssBaseline, useTheme } from '@geist-ui/react'
 import React from "react";
 import NextNProgress from 'nextjs-progressbar';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   const [themeType, setThemeType] = React.useState('light')
 	React.useEffect(() => {
 		const md = window.matchMedia('(prefers-color-scheme: dark)')

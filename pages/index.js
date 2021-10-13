@@ -9,7 +9,7 @@ export default function Home() {
 	const bubble = useRef(null)
 	useEffect(() => {
 		const setFromEvent = (e) => {
-			const el = bubble.current as any
+			const el = bubble.current
 			const x = e.clientX / 5 - window.innerWidth / 10
 			const y = e.clientY / 5 - window.innerHeight / 10
 			el.style.transform = `translate(${x}px, ${y}px )`
