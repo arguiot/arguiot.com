@@ -1,4 +1,4 @@
-import { Text, Page } from '@geist-ui/react'
+import { Text, Page, Spacer } from '@geist-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
@@ -30,6 +30,7 @@ export default function Home() {
 		</Text>
 		<div className={ styles.bubble } ref={bubble}/>
 	</header>
+	<Spacer y={3} />
 	<Page>
 		<Summary />
 	</Page>

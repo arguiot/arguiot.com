@@ -2,8 +2,8 @@ import { Card, Grid } from "@geist-ui/react";
 
 export default function Summary() {
     return <Card style={{
-        background: "rgba(255, 255, 255, 0.5)",
-        border: "1px solid #000000",
+        background: "var(--white)",
+        border: "1px solid var(--text-color)",
         boxSizing: "border-box",
         boxShadow: "0px 0px 50px rgba(0, 0, 0, 0.1)",
         backdropFilter: "blur(100px)",
@@ -55,6 +55,7 @@ export default function Summary() {
             justify-content: center;
             align-items: center;
             font-size: 14px;
+            color: var(--text-color);
         }
         .globe {
             background: url(/img/globe.svg);
@@ -74,6 +75,11 @@ export default function Summary() {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+        }
+        @media (prefers-color-scheme: dark) {
+            .icon {
+                filter: invert(1);
+            }
         }
         `}</style>
     </Card>

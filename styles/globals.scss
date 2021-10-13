@@ -40,7 +40,7 @@ p.magnify {
 	color-scheme: light dark;
 	--blue: #1277EB;
 	--background: white;
-	--semi-white: #eee;
+	--white: #fff;
 	--text-color: #000;
 	--footer: #fafafa;
 	--secondary-text: rgb(102, 102, 102);
@@ -53,8 +53,8 @@ p.magnify {
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background: #1e1e1e;
-		--transparentBack: rgba(30, 30, 30, 0.85);
-		--semi-white: #333;
+		--transparentBack: rgba(30, 30, 30, 0);
+		--white: #000;
 		--text-color: #fff;
 		--footer: #000;
 		--secondary-text: #eee;
