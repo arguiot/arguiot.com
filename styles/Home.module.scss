@@ -5,6 +5,16 @@
 	flex-direction: column;
 	height: 100vh;
 	padding: 100px;
+	padding-bottom: 0;
+	&::after {
+		content: '';
+		position: absolute;
+		top: calc(100vh - 100px);
+		left: 0;
+		width: 100vw;
+		height: 100px;
+		background-image: linear-gradient(var(--transparentBack) 0%, var(--background) 100% );
+	}
 	&::before {
 		content: '';
 		background: linear-gradient(0, rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),

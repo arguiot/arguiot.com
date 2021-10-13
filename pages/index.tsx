@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import styles from "../styles/Home.module.scss"
+import Summary from "../components/Summary"
 
 export default function Home() {
 	const bubble = useRef(null)
@@ -12,7 +13,6 @@ export default function Home() {
 			const x = e.clientX / 5 - window.innerWidth / 10
 			const y = e.clientY / 5 - window.innerHeight / 10
 			el.style.transform = `translate(${x}px, ${y}px )`
-			console.log(el.style.transform)
 		}
 		window.addEventListener("mousemove", setFromEvent);
 	
@@ -31,7 +31,7 @@ export default function Home() {
 		<div className={ styles.bubble } ref={bubble}/>
 	</header>
 	<Page>
-		
+		<Summary />
 	</Page>
 	<Footer />
 	</React.Fragment>
