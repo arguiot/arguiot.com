@@ -3,6 +3,7 @@ import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
 import Link from 'next/link'
 import Author from '../types/author'
+import { Badge, Spacer } from '@geist-ui/react'
 
 type Props = {
   title: string
@@ -11,6 +12,7 @@ type Props = {
   excerpt: string
   author: Author
   link: string
+  project: boolean
 }
 
 const PostPreview = ({
@@ -20,6 +22,7 @@ const PostPreview = ({
   excerpt,
   author,
   link,
+  project
 }: Props) => {
   return (
     <div>
@@ -30,6 +33,10 @@ const PostPreview = ({
         <Link href={ link }>
           <a className="hover:underline text-current">{title}</a>
         </Link>
+        { project && <>
+        <Spacer w={1} inline />
+        <Badge>Project</Badge>
+        </> }
       </h3>
       <div className="text-lg mb-4">
         <DateFormatter dateString={date} />

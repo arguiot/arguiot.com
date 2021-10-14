@@ -4,9 +4,20 @@
     top: 0;
     width: 100vw;
     height: var(--nav-height);
-    // border-bottom: 1px solid var(--text-color);
-    // background: var(--transparentBack);
-    // backdrop-filter: saturate(180%) blur(20px);
+
+    &.opaque{
+        border-bottom: 1px solid var(--text-color);
+        backdrop-filter: saturate(180%) blur(20px);
+        transition: all 500ms ease-in-out;
+        &::before {
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: var(--nav-height);
+            background: var(--background);
+            opacity: 0.85;
+        }
+    }
     z-index: 100;
     transition: height 200ms ease-in-out;
     a {
@@ -53,7 +64,7 @@
         width: 35px;
         height: 25px;
         position: fixed;
-        top: 25px;
+        top: 35px;
         right: 50px;
         // display: flex;
         justify-content: space-around;

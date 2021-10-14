@@ -16,10 +16,11 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
-  return (
+  return <>
+    <NavBar />
     <Layout preview={preview}>
       <Container>
-        <NavBar />
+        
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -43,7 +44,7 @@ export default function Post({ post, morePosts, preview }) {
         )}
       </Container>
     </Layout>
-  )
+  </>
 }
 
 export async function getStaticProps({ params }) {

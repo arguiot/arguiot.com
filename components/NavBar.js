@@ -1,7 +1,7 @@
 import styles from '../styles/NavBar.module.scss'
 import { Link, Text, useModal } from '@geist-ui/react'
 import NextLink from 'next/link'
-import React from "react";
+import React, { useEffect } from "react";
 
 function NavBar() {
     const [state, setState] = React.useState(false)
@@ -9,7 +9,20 @@ function NavBar() {
     const close = () => setState(false)
     const menuToggleClass = [styles.menuToggle, state ? styles.cross : ""].join(" ")
     
-    return <div className={ styles.nav }>
+    const [opaque, setOpaque] = React.useState(false)
+    useEffect(() => {
+        window.onscroll = () => {
+            const y = document.documentElement.scrollTop || document.body.scrollTop
+            if (y >= 100) {
+                setOpaque(true)
+            } else if (y < 100) {
+                setOpaque(false)
+            }
+        }
+    }, [])
+    const navClass = [styles.nav, opaque ? styles.opaque : ""].join(" ")
+
+    return <div className={ navClass }>
                 <NextLink href="/">
                     <a><Text b className={ styles.logo }>Arthur <span className={ styles.lastName } >Guiot</span></Text></a>
                 </NextLink>
