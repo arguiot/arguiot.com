@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "@geist-ui/react": "dev",
@@ -14,9 +15,10 @@
     "classnames": "^2.3.1",
     "date-fns": "^2.25.0",
     "gray-matter": "^4.0.3",
-    "next": "11.0.1",
+    "next": "latest",
     "nextjs-progressbar": "^0.0.11",
     "postcss": "^8.3.9",
+    "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "remark": "13.0.0",
