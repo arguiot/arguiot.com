@@ -35,6 +35,7 @@ export default function Home({ allPosts }) {
 	<Spacer y={3} />
 	<Page>
 		<Summary />
+		<Spacer h={5} />
 		{allPosts.length > 0 && <MoreStories posts={allPosts} />}
 	</Page>
 	<Footer />
@@ -49,6 +50,7 @@ export async function getStaticProps() {
 		'author',
 		'coverImage',
 		'excerpt',
+		'external'
 	])
 
 	return {

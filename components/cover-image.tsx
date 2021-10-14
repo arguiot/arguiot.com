@@ -4,10 +4,10 @@ import Image from "next/image"
 type Props = {
   title: string
   src: string
-  slug?: string
+  link?: string
 }
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, link }: Props) => {
   const image = (
     <Image
       src={src}
@@ -15,14 +15,14 @@ const CoverImage = ({ title, src, slug }: Props) => {
       objectFit="cover"
       alt={`Cover Image for ${title}`}
       className={cn('shadow-small', {
-        'hover:shadow-medium transition-shadow duration-200': slug,
+        'hover:shadow-medium transition-shadow duration-200 rounded': link,
       })}
     />
   )
   return (
     <div className="sm:mx-0" style={{ position: "relative", height: "350px" }}>
-      {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+      {link ? (
+        <Link href={link}>
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (

@@ -1,6 +1,9 @@
 module.exports = {
     purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
     theme: {
+        fontFamily: {
+            sans: ["Poppins"]
+        },
         extend: {
             colors: {
                 'accent-1': '#FAFAFA',
