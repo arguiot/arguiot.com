@@ -14,10 +14,11 @@ const CoverImage = ({ title, src, link }: Props) => {
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200 rounded': link,
       })}
+      style={{ width: "100%" }}
     />
   )
   return (
-    <div className="sm:mx-0" style={{ position: "relative", height: "350px" }}>
+    <div className="sm:mx-0">
       {link ? (
         <Link href={link}>
           <a aria-label={title}>{image}</a>
