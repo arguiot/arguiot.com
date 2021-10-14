@@ -1,3 +1,5 @@
+@tailwind base;
+
 html,
 body {
 	padding: 0;
@@ -60,3 +62,13 @@ p.magnify {
 		--secondary-text: #eee;
 	}
 }
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write you own custom component styles here */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */

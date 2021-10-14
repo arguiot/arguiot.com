@@ -18,16 +18,13 @@
     }
 
     .logo {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        line-height: var(--nav-height);
         height: var(--nav-height);
         position: fixed;
         top: 0;
         left: 100px;
         .lastName {
             font-weight: bold;
-            margin-left: 5px;
         }
     }
 

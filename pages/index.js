@@ -4,8 +4,10 @@ import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import styles from "../styles/Home.module.scss"
 import Summary from "../components/Summary"
+import { getAllPosts } from '../lib/api'
+import MoreStories from '../components/more-stories'
 
-export default function Home() {
+export default function Home({ allPosts }) {
 	const bubble = useRef(null)
 	useEffect(() => {
 		const setFromEvent = (e) => {
@@ -33,7 +35,25 @@ export default function Home() {
 	<Spacer y={3} />
 	<Page>
 		<Summary />
+		{allPosts.length > 0 && <MoreStories posts={allPosts} />}
 	</Page>
 	<Footer />
 	</React.Fragment>
+}
+
+export async function getStaticProps() {
+	const allPosts = getAllPosts([
+		'title',
+		'date',
+		'slug',
+		'author',
+		'coverImage',
+		'excerpt',
+	])
+
+	return {
+		props: {
+			allPosts
+		},
+	}
 }

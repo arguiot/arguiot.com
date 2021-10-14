@@ -11,7 +11,7 @@ function NavBar() {
     
     return <div className={ styles.nav }>
                 <NextLink href="/">
-                    <Text b className={ styles.logo }>Arthur <span className={ styles.lastName } >Guiot</span></Text>
+                    <a><Text b className={ styles.logo }>Arthur <span className={ styles.lastName } >Guiot</span></Text></a>
                 </NextLink>
                 <div className={ styles.menuContainer } style={{ display: state ? "flex" : "none" }}>
                     <NextLink href="/about">

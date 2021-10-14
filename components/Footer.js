@@ -1,5 +1,5 @@
 import { Divider, Grid, Text } from "@geist-ui/react";
-import { Github, Twitter } from '@geist-ui/react-icons'
+import { Github, Linkedin, Twitter } from '@geist-ui/react-icons'
 import Link from "next/link";
 import styles from "../styles/Footer.module.scss"
 import React from "react"
@@ -19,8 +19,9 @@ export default function Footer() {
             <Divider />
             <Text h3>Contact</Text>
             <div className={ styles.social }>
-                <a href="https://github.com/pr1mer-tech" target="_blank" rel="noreferrer"><Github /> Github</a>
-                <a href="https://twitter.com/pr1mertech" target="_blank" rel="noreferrer"><Twitter /> Twitter</a>
+                <a href="https://www.linkedin.com/in/arguiot/" target="_blank" rel="noreferrer"><Linkedin /> LinkedIn</a>
+                <a href="https://github.com/arguiot" target="_blank" rel="noreferrer"><Github /> Github</a>
+                <a href="https://twitter.com/arthur_guiot" target="_blank" rel="noreferrer"><Twitter /> Twitter</a>
             </div>
         </Grid>
         <Grid xs={24} md={7}>
