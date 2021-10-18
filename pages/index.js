@@ -1,4 +1,4 @@
-import { Text, Page, Spacer } from '@geist-ui/react'
+import { Text, Spacer, Grid, Card, Description, Link, Tooltip } from '@geist-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
@@ -33,11 +33,34 @@ export default function Home({ allPosts }) {
 		<div className={ styles.bubble } ref={bubble}/>
 	</header>
 	<Spacer y={3} />
-	<Page>
+	<div className={ styles.layout }>
 		<Summary />
 		<Spacer h={5} />
 		{allPosts.length > 0 && <MoreStories posts={allPosts} />}
-	</Page>
+		<Text h1>Say Hi!</Text>
+		<Text h3>Shoot me an email, reach out on social media, or send a carrier pigeon. Regardless of how, I’d love to get in touch.</Text>
+		<Spacer h={3} />
+		<Grid.Container gap={2}>
+			<Grid xs={24} md={8}>
+				<Card>
+					<Text>Want my services? It's here:</Text>
+					<Description title="Agency" content={<Link href="https://pr1mer.tech" color underline target="_blank">pr1mer.tech</Link>} />
+				</Card>
+			</Grid>
+			<Grid xs={24} md={8}>
+				<Card>
+					<Text>Want to learn about me? Read my CV!</Text>
+					<Description title="Resume" content={<><Link href="/resume.pdf" color underline >English</Link> | <Link href="/resume-fr.pdf" color underline >French</Link></>} />
+				</Card>
+			</Grid>
+			<Grid xs={24} md={8}>
+				<Card>
+					<Text>Feel generous? Send some Crypto!</Text>
+					<Description title="Ethereum Adress" content={<Tooltip text="Ethereum Mainnet & Polygon compatible"><Link href="https://etherscan.io/address/0x492804D7740150378BE8d4bBF8ce012C5497DeA9" color underline target="_blank">0x4928...DeA9</Link></Tooltip>} />
+				</Card>
+			</Grid>
+		</Grid.Container>
+	</div>
 	<Footer />
 	</React.Fragment>
 }

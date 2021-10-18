@@ -27,9 +27,7 @@ function NavBar() {
                     <a><Text b className={ styles.logo }>Arthur <span className={ styles.lastName } >Guiot</span></Text></a>
                 </NextLink>
                 <div className={ styles.menuContainer } style={{ display: state ? "flex" : "none" }}>
-                    <NextLink href="/about">
-                        <Text b><Link underline onClick={ close }>About</Link></Text>
-                    </NextLink>
+                    <Text b><Link href="https://pr1mer.tech" underline onClick={ close } target="_blank">Services</Link></Text>
                     <NextLink href="/contact">
                         <Text b><Link underline onClick={ close } href="mailto:arguiot@gmail.com">Contact</Link></Text>
                     </NextLink>
