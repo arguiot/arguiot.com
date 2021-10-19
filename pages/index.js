@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.scss"
 import Summary from "../components/Summary"
 import { getAllPosts } from '../lib/api'
 import MoreStories from '../components/more-stories'
+import Head from "next/head"
 
 export default function Home({ allPosts }) {
 	const bubble = useRef(null)
@@ -24,6 +25,12 @@ export default function Home({ allPosts }) {
 	}, []);
 
 	return <React.Fragment>
+	<Head>
+		<title>
+			Arthur Guiot
+		</title>
+		<meta property="og:image" content="/og-image.jpg" />
+	</Head>
 	<NavBar />
 	<header className={ styles.header } >
 		<Text h1>Arthur <Text b>Guiot</Text></Text>
