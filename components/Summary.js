@@ -8,7 +8,8 @@ export default function Summary() {
         boxShadow: "0px 0px 50px rgba(0, 0, 0, 0.1)",
         backdropFilter: "blur(100px)",
         borderRadius: "50px",
-        width: "100%"
+        width: "100%",
+        marginTop: "20px"
     }}>
         <Grid.Container gap={2} justify="center" wrap="wrap">
             <Grid xs={24} sm={12} md={6}>
