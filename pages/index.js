@@ -1,4 +1,4 @@
-import { Text, Spacer, Grid, Card, Description, Link, Tooltip } from '@geist-ui/react'
+import { Text, Spacer, Grid, Card, Description, Link, Tooltip, Tag } from '@geist-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
@@ -7,6 +7,7 @@ import Summary from "../components/Summary"
 import { getAllPosts } from '../lib/api'
 import MoreStories from '../components/more-stories'
 import Head from "next/head"
+import Portfolio from "../components/Portfolio"
 
 export default function Home({ allPosts }) {
 	const bubble = useRef(null)
@@ -33,15 +34,17 @@ export default function Home({ allPosts }) {
 	</Head>
 	<NavBar />
 	<header className={ styles.header } >
-		<Text h1>Arthur <Text b>Guiot</Text></Text>
+		<Text h1 style={{ fontWeight: "normal" }}>Arthur <Text b>Guiot</Text></Text>
 		<Text p className={ styles.text }>
-			Student by day, developer by night and F1 fan on Sunday. Curious by nature, I love to discover new things, new places and new people. I create cool stuff that I share here.
+			I'm a computer science student at <a href="https://floridapoly.edu" target='_blank' style={{ color: "inherit" }}>Florida Polytechnic University</a>. I'm a passionate programmer, and I love to build things and share them with the world. Have fun learning about me and my projects!
 		</Text>
 		<div className={ styles.bubble } ref={bubble}/>
 	</header>
 	<Spacer y={3} />
 	<div className={ styles.layout }>
 		<Summary />
+		<Spacer h={5} />
+		<Portfolio />
 		<Spacer h={5} />
 		{allPosts.length > 0 && <MoreStories posts={allPosts} />}
 		<Text h1>Say Hi!</Text>

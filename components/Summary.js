@@ -43,7 +43,7 @@ export default function Summary() {
                 <div className="feature">
                     <div className="icon experience" />
                     <div className="description">
-                        <b>6 years of experience</b><br/>
+                        <b>{ new Date().getFullYear() - 2016 } years of experience</b><br/>
                         In computer programming
                     </div>
                 </div>
