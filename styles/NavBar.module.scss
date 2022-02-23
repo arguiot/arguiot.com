@@ -27,18 +27,7 @@
     * {
         transition: all 200ms ease-in-out;
     }
-
-    .logo {
-        line-height: var(--nav-height);
-        height: var(--nav-height);
-        position: fixed;
-        top: 0;
-        left: 100px;
-        .lastName {
-            font-weight: bold;
-        }
-    }
-
+    
     .menuContainer {
         position: fixed;
         top: 0;

@@ -8,9 +8,12 @@ import { getAllPosts } from '../lib/api'
 import MoreStories from '../components/more-stories'
 import Head from "next/head"
 import Portfolio from "../components/Portfolio"
+import NextLink from 'next/link'
 
 export default function Home({ allPosts }) {
 	const bubble = useRef(null)
+	const name = useRef(null)
+	const text = useRef(null)
 	useEffect(() => {
 		const setFromEvent = (e) => {
 			const el = bubble.current
@@ -20,8 +23,30 @@ export default function Home({ allPosts }) {
 		}
 		window.addEventListener("mousemove", setFromEvent);
 	
+		const rect = name.current.getBoundingClientRect()
+		const animationFromEvent = (e) => {
+			const el = name.current
+			const rect = text.current.getBoundingClientRect()
+			let percent = window.scrollY / 100
+			if (percent < 0) { percent = 0 }
+			if (percent > 1) { percent = 1 }
+			let top = (rect.top - 75) * (1 - percent)
+			if (top < 0) { top = 0 }
+			let fontSize = 48 * (1 - percent)
+			if (fontSize < 16) { fontSize = 16 }
+			let fontWeight = 200 * percent + 400
+			if (fontWeight < 400) { fontWeight = 400 }
+			el.style.top = `${top}px`
+			el.style.left = `${rect.left}px`
+			el.style.fontSize = `${fontSize}px`
+			el.style.fontWeight = `${fontWeight}`
+		}
+		window.addEventListener("scroll", animationFromEvent);
+		window.addEventListener("resize", animationFromEvent);
 		return () => {
 		  window.removeEventListener("mousemove", setFromEvent);
+		  window.removeEventListener("scroll", animationFromEvent);
+		  window.removeEventListener("resize", animationFromEvent);
 		};
 	}, []);
 
@@ -34,10 +59,12 @@ export default function Home({ allPosts }) {
 	</Head>
 	<NavBar />
 	<header className={ styles.header } >
-		<Text h1 style={{ fontWeight: "normal" }}>Arthur <Text b>Guiot</Text></Text>
-		<Text p className={ styles.text }>
+		<NextLink href="/"><a style={{ zIndex: 1000 }}>
+			<h1 className={ styles.logo } ref={name}>Arthur <Text b>Guiot</Text></h1>
+		</a></NextLink>
+		<p className={ styles.text } ref={text}>
 			I'm a computer science student at <a href="https://floridapoly.edu" target='_blank' style={{ color: "inherit" }}>Florida Polytechnic University</a>. I'm a passionate programmer, and I love to build things and share them with the world. Have fun learning about me and my projects!
-		</Text>
+		</p>
 		<div className={ styles.bubble } ref={bubble}/>
 	</header>
 	<Spacer y={3} />

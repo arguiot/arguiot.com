@@ -48,6 +48,16 @@
 		font-size: 20px;
 		width: calc(100vw - 200px);
 		max-width: 450px;
+		margin-top: 200px;
+		z-index: 50;
+	}
+	.logo {
+		font-weight: normal;
+		position: fixed;
+		left: 100px;
+		z-index: 1000;
+		line-height: 100px;
+		color: var(--text-color);
 	}
 }
 

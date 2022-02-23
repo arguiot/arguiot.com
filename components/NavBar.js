@@ -23,9 +23,6 @@ function NavBar() {
     const navClass = [styles.nav, opaque ? styles.opaque : ""].join(" ")
 
     return <div className={ navClass }>
-                <NextLink href="/">
-                    <a><Text b className={ styles.logo }>Arthur <span className={ styles.lastName } >Guiot</span></Text></a>
-                </NextLink>
                 <div className={ styles.menuContainer } style={{ display: state ? "flex" : "none" }}>
                     <Text b><Link href="https://pr1mer.tech" underline onClick={ close } target="_blank">Services</Link></Text>
                     <Text b><Link href="https://projects.arguiot.com" underline onClick={ close } target="_blank">OSS</Link></Text>
