@@ -43,6 +43,7 @@ export default function Home({ allPosts }) {
 		}
 		window.addEventListener("scroll", animationFromEvent);
 		window.addEventListener("resize", animationFromEvent);
+		animationFromEvent()
 		return () => {
 		  window.removeEventListener("mousemove", setFromEvent);
 		  window.removeEventListener("scroll", animationFromEvent);

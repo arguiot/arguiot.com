@@ -82,5 +82,45 @@ export default function Portfolio() {
                 I decided to join Florida Poly to give myself the best chance to succeed. As the initiator of the creation of a technology hub, and located in Florida's tech corridor, Florida Poly is the first STEM university in Florida and is looking forward to growing. It was the perfect opportunity for me to continue my career in an environment marked by space exploration, auto racing and other applications of technology.
             </Text>
         </Grid>
+        <Grid xs={24} md={8}>
+            <Text className={ styles.label }>Featured Projects</Text>
+        </Grid>
+        <Grid xs={24} md={16}>
+            <Grid.Container gap={2}>
+                <Grid xs={24} md={8}>
+                    <Card className={ styles.card }>
+                        <img src="/img/euclid-ios_102x102@1x.png" alt="Euclid iOS" className={ styles.cardImg }/>
+                        <Text className={ styles.label } align="center"><a href="https://euclid.pr1mer.tech" target="_blank">Euclid Calculator</a></Text>
+                        <Text className={ styles.cardText } style={{ textAlign: "left "}}>
+                            <Text b>Euclid is a completely redesigned calculator for macOS and iOS</Text><br/><br/>
+                            <Text b>Success:</Text><br/>
+                            Recommended by <a href="https://setapp.com/apps/euclid" target="_blank">SetApp</a>, 50K+ downloads
+                        </Text>
+                    </Card>
+                </Grid>
+                <Grid xs={24} md={8}>
+                    <Card className={ styles.card }>
+                        <img src="/img/masecondecabane_102x102@1.png" alt="Ma Seconde Cabane" className={ styles.cardImg }/>
+                        <Text className={ styles.label } align="center"><a href="https://masecondecabane.com" target="_blank">Ma Seconde Cabane</a></Text>
+                        <Text className={ styles.cardText } style={{ textAlign: "left "}}>
+                            <Text b>MSC is an online store for second hand children's clothing</Text><br/><br/>
+                            <Text b>Experience:</Text><br/>
+                            E-Commerce website completely handmade
+                        </Text>
+                    </Card>
+                </Grid>
+                <Grid xs={24} md={8}>
+                    <Card className={ styles.card }>
+                        <img src="/img/cryptool_102x102@1.png" alt="Ma Seconde Cabane" className={ styles.cardImg }/>
+                        <Text className={ styles.label } align="center"><a href="https://corona-tracing.cryptool.org" target="_blank">Corona Tracing</a></Text>
+                        <Text className={ styles.cardText } style={{ textAlign: "left "}}>
+                            <Text b>A campaign to raise awareness of tracing applications for COVID.</Text><br/><br/>
+                            <Text b>Success:</Text><br/>
+                            Highlighted by several newspapers, 10M+ visitors.
+                        </Text>
+                    </Card>
+                </Grid>
+            </Grid.Container>
+        </Grid>
     </Grid.Container>
 }

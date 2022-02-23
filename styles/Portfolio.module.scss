@@ -30,6 +30,9 @@
     width: 100% !important;
     margin-top: 20px !important;
     color: var(--text-color) !important;
+    a {
+        color: inherit;
+    }
 }
 
 .cardText {
@@ -38,4 +41,10 @@
     }
     font-size: 12px;
     text-align: justify;
+}
+
+.cardImg {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 auto;
 }
