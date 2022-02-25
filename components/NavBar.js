@@ -33,9 +33,7 @@ function NavBar() {
                 <div className={ styles.menuContainer } style={{ display: state ? "flex" : "none" }}>
                     <Text b><Link href="https://pr1mer.tech" underline onClick={ close } target="_blank">Services</Link></Text>
                     <Text b><Link href="https://projects.arguiot.com" underline onClick={ close } target="_blank">OSS</Link></Text>
-                    <NextLink href="/contact">
-                        <Text b><Link underline onClick={ close } href="mailto:arguiot@gmail.com">Contact</Link></Text>
-                    </NextLink>
+                    <Text b><Link underline onClick={ close } href="mailto:arguiot@gmail.com">Contact</Link></Text>
                 </div>
                 <div className={ menuToggleClass } onClick={ toggle }>
                     <div className={ styles.l }></div>
