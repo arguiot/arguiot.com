@@ -1,6 +1,6 @@
 ---
 title: 'A note on developing real-world payment system with the blockchain'
-excerpt: 'The blockchain is an incredible tool for storing and manipulating data. But in the real world, it is often too slow to be used for anything other than cryptocurrencies. This is especially true for payment systems that need to be able to scale.'
+excerpt: 'The blockchain is an incredible tool for storing and manipulating data. But it is often too slow to be used for anything other than cryptocurrencies in the real world. It is especially true for payment systems that need to scale.'
 coverImage: '/uploads/2022/02/nasdaq-header.jpg'
 date: '2022-02-25T06:00:00.322Z'
 author:
