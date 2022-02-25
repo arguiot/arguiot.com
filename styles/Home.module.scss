@@ -20,12 +20,12 @@
 	&::before {
 		content: '';
 		background: linear-gradient(0, rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
-		url(../public/img/header-white.jpg);
+		url("https://images.pr1mer.tech/arguiot/header-white.jpg?auto=compress,format&fit=max&w=1000");
 		background-size: cover;
 		width: 50vw;
-		height: 100vh;
+		height: 90vh;
 		position: absolute;
-		top: 0;
+		top: 10vh;
 		right: 0;
 	}
 	.bubble {
@@ -37,7 +37,7 @@
 		opacity: 0.5;
 		scale: 2;
 		will-change: transform, opacity;
-		background: url(../public/img/blurred.png);
+		background: url("https://images.pr1mer.tech/arguiot/blurred.png?auto=compress,format");
 		width: 543px;
 		height: 490px;
 		animation: rotate 20s infinite;
@@ -82,7 +82,7 @@
 		background-color: #000;
 	}
 	.header::before {
-		background: linear-gradient(0, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../public/img/header-black.jpg) !important;
+		background: linear-gradient(0, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://images.pr1mer.tech/arguiot/header-black.jpg?auto=compress,format&fit=max&w=1000") !important;
 		background-size: cover !important;
 	}
 }

@@ -16,6 +16,7 @@ export default function Home({ allPosts }) {
 	const text = useRef(null)
 	useEffect(() => {
 		const setFromEvent = (e) => {
+			if (bubble.current == null) return
 			const el = bubble.current
 			const x = e.clientX / 5 - window.innerWidth / 10
 			const y = e.clientY / 5 - window.innerHeight / 10
@@ -25,6 +26,7 @@ export default function Home({ allPosts }) {
 	
 		const rect = name.current.getBoundingClientRect()
 		const animationFromEvent = (e) => {
+			if (text.current == null || text.current == null) return
 			const el = name.current
 			const rect = text.current.getBoundingClientRect()
 			let percent = window.scrollY / 100
