@@ -23,9 +23,10 @@
 		url("https://images.pr1mer.tech/arguiot/header-white.jpg?auto=compress,format&fit=max&w=1000");
 		background-size: cover;
 		width: 50vw;
-		height: 90vh;
+		max-width: 66vh;
+		height: calc(100vh - 100px);
 		position: absolute;
-		top: 10vh;
+		top: 100px;
 		right: 0;
 	}
 	.bubble {
@@ -70,7 +71,8 @@
 
 @media (max-width: 900px) {
     .header {
-		padding: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
 		.text {
 			width: calc(100vw - 40px);
 		}
