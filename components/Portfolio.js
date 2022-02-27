@@ -1,4 +1,5 @@
 import { Card, Grid, Text } from "@geist-ui/react";
+import classNames from "classnames";
 import styles from "../styles/Portfolio.module.scss";
 
 export default function Portfolio() {
@@ -111,7 +112,7 @@ export default function Portfolio() {
                 </Grid>
                 <Grid xs={24} md={8}>
                     <Card className={ styles.card }>
-                        <img src="/img/cryptool_102x102@1.png" alt="Ma Seconde Cabane" className={ styles.cardImg }/>
+                        <img src="/img/cryptool_102x102@1.png" alt="Corona Tracing" className={ classNames(styles.cardImg, styles.darkInvert) }/>
                         <Text className={ styles.label } align="center"><a href="https://corona-tracing.cryptool.org" target="_blank">Corona Tracing</a></Text>
                         <Text className={ styles.cardText } style={{ textAlign: "left "}}>
                             <Text b>A campaign to raise awareness of tracing applications for COVID.</Text><br/><br/>

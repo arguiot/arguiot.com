@@ -18,6 +18,9 @@
     .text {
         color:rgba(255, 255, 255, 0.75) !important;
     }
+    .darkInvert {
+        filter: invert(1);
+    }
 }
 
 .card {
