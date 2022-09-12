@@ -1,6 +1,6 @@
 import { Card, Grid } from "@geist-ui/react";
 
-export default function Summary() {
+export default function Summary({ contributions = 5000 }) {
     return <Card style={{
         background: "var(--white)",
         border: "1px solid var(--text-color)",
@@ -25,7 +25,7 @@ export default function Summary() {
                 <div className="feature">
                     <div className="icon code" />
                     <div className="description">
-                        <b>5000+ Contributions</b><br/>
+                        <b>{ Math.round(contributions / 500) * 500 }+ Contributions</b><br/>
                         On open-source projects
                     </div>
                 </div>
@@ -84,4 +84,25 @@ export default function Summary() {
         }
         `}</style>
     </Card>
+}
+
+export async function getContributions(token, username, year) {
+    const headers = {
+        'Authorization': `bearer ${token}`,
+    }
+    const body = {
+        "query": `query {
+            user(login: "${username}") {
+              name
+              contributionsCollection(from: "${year.toISOString()}") {
+                contributionCalendar {
+                  totalContributions
+                }
+              }
+            }
+          }`
+    }
+    const response = await fetch('https://api.github.com/graphql', { method: 'POST', body: JSON.stringify(body), headers: headers })
+    const data = await response.json()
+    return data
 }

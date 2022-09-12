@@ -20,7 +20,7 @@
 	&::before {
 		content: '';
 		background: linear-gradient(0, rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
-		url("https://images.pr1mer.tech/arguiot/header-white.jpg?auto=compress,format&fit=max&w=1000");
+		url("https://media.pr1mer.tech/arguiot/header-white.jpg?auto=compress,format&fit=max&w=1000");
 		background-size: cover;
 		width: 50vw;
 		max-width: 66vh;
@@ -38,7 +38,7 @@
 		opacity: 0.5;
 		scale: 2;
 		will-change: transform, opacity;
-		background: url("https://images.pr1mer.tech/arguiot/blurred.png?auto=compress,format");
+		background: url("https://media.pr1mer.tech/arguiot/blurred.png?auto=compress,format");
 		width: 543px;
 		height: 490px;
 		animation: rotate 20s infinite;
@@ -54,7 +54,7 @@
 	}
 	.logo {
 		font-weight: normal;
-		position: fixed;
+		// position: fixed;
 		left: 100px;
 		z-index: 1000;
 		line-height: 100px;

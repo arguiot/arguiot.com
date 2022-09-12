@@ -3,14 +3,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import styles from "../styles/Home.module.scss"
-import Summary from "../components/Summary"
+import Summary, { getContributions } from "../components/Summary"
 import { getAllPosts } from '../lib/api'
 import MoreStories from '../components/more-stories'
 import Head from "next/head"
 import Portfolio from "../components/Portfolio"
 import NextLink from 'next/link'
 
-export default function Home({ allPosts }) {
+export default function Home({ allPosts, contributions }) {
 	const bubble = useRef(null)
 	const name = useRef(null)
 	const text = useRef(null)
@@ -26,8 +26,9 @@ export default function Home({ allPosts }) {
 	
 		const rect = name.current.getBoundingClientRect()
 		const animationFromEvent = (e) => {
-			if (text.current == null || text.current == null) return
+			if (text.current == null || name.current == null) return
 			const el = name.current
+			el.style.position = "fixed"
 			const rect = text.current.getBoundingClientRect()
 			let percent = window.scrollY / 100
 			if (percent < 0) { percent = 0 }
@@ -72,7 +73,7 @@ export default function Home({ allPosts }) {
 	</header>
 	<Spacer y={3} />
 	<div className={ styles.layout }>
-		<Summary />
+		<Summary contributions={contributions}/>
 		<Spacer h={5} />
 		<Portfolio />
 		<Spacer h={5} />
@@ -116,9 +117,17 @@ export async function getStaticProps() {
 		'external'
 	])
 
+	let contributions = 0;
+	// 2016 to now
+	for (let i = new Date(2016, 0, 1); i <= new Date(); i.setFullYear(i.getFullYear() + 1)) {
+		let data = await getContributions(process.env.GITHUB_TOKEN, "arguiot", i)
+		contributions += data.data.user.contributionsCollection.contributionCalendar.totalContributions
+	}
+
 	return {
 		props: {
-			allPosts
+			allPosts,
+			contributions
 		},
 	}
 }
