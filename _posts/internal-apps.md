@@ -13,7 +13,7 @@ ogImage:
 No matter what your business is, if you work with smartphones or computers, chances are you've already dealt with "in-house" apps. However, many of them, if not most, are slow, ugly, and don't seem to have been made with as much care as those distributed to the general public.
 
 > Here's how, as a developer, you can greatly improve an internal app by following a few simple principles. 
-> I've recently had to develop several internal apps to support terminal payments, inventory management, etc. I'll use my experience to help me understand how to improve the app. I will use my experience to explain these different principles.
+> I've recently had to develop several internal apps to support terminal payments, inventory management, etc. I'll use my experience to help you understand how to improve your app.
 
 ## Making great apps
 In order to simplify the process, I decided to categorize the development of an internal app into 3 parts: design, creation and distribution.
@@ -43,7 +43,7 @@ Coding the app is probably the longest step, but not necessarily the hardest, if
 
 ![Data Flow in Relay](/uploads/2022/09/Capture%20d%E2%80%99%C3%A9cran%202022-09-25%20%C3%A0%2017.56.38.png)
 
-The backend of your app is important. Very important. In fact, unlike an app for the general public, what makes a good internal app is its backend. Data management then becomes a central issue, and the choices that are made to develop the app will have many consequences throughout the development. That's why it's important to design the bridge between your app state and your databases. Fast, consistent and realtime data fetching is what will make the flow within your app smooth and enjoyable. Build your apps around bidirectionnal data processing layers that can ensure consistency within your app’s objects and your server’s data. You should organise your layer’s responsabilities according to both your flow and data. As the layer gets higher in the stack (closer to the UI), they should take care of the flow, whereas the lower they are, they should take care of accurately manage the data flow.
+The backend of your app is important. Very important. In fact, unlike an app for the general public, what makes a good internal app is its backend. Data management then becomes a central issue, and the choices that are made to develop the app will have many consequences throughout the development. That's why it's important to design the bridge between your app state and your databases. Fast, consistent and realtime data fetching is what will make the flow within your app smooth and enjoyable. Build your apps around bidirectional data processing layers that can ensure consistency within your app’s objects and your server’s data. You should organise your layer’s responsabilities according to both your flow and data. As the layer gets higher in the stack (closer to the UI), they should take care of the flow, whereas the lower they are, they should take care of accurately manage the data flow.
 
 > For example, in my case, I had to design a first Network Layer which was in charge of getting the right token, and managing the connectivity between my app and my database. Then, a second layer, which took care of encoding and decoding the objects sent and received to the database. A third one, etc. Finally, I had a controller for each task, which took care of managing that each action was correctly executed.
 #### Zero Trust, period.
