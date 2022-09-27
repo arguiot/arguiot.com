@@ -9,7 +9,7 @@ export default function Portfolio() {
         </Grid>
         <Grid xs={24} md={16}>
             <Text className={ styles.text }>
-                Arthur Guiot is a software engineering student at Florida Polytechnic University. Arthur has had the opportunity to live all over the world, and to work with people from different cultures on many projects. Over the years, he has accumulated a lot of experience in application development, website development, and specialised programs, especially in the field of cryptography. Indeed, he has been very involved in several projects, such as CrypTool (popular educational software) allowing him to practice his technical, professional and leadership skills. Today, Arthur works as a freelancer in his spare time, allowing him to contribute his expertise, gain skills and work in a fast paced environment that suits him. Fuelled by a passion for exploring new different applications of technology and being curious innately he is particularly interested in the new possibilities that blockchain offers and wants to pursue a career in the technology and finance sector.
+                I am a software engineering student at Florida Polytechnic University. I have had the opportunity to live all over the world, and to work with people from different cultures on many projects. Over the years, I have accumulated a lot of experience in application development, website development, and specialised programs, especially in the field of cryptography. Indeed, I have been very involved in several projects, such as CrypTool (popular educational software) allowing me to practice my technical, professional and leadership skills. Today, I work as a freelancer in my spare time, allowing me to contribute my expertise, gain skills and work in a fast paced environment that suits me. Fuelled by a passion for exploring new different applications of technology and being curious innately I am particularly interested in the new possibilities that blockchain offers and want to pursue a career in the technology and finance sector.
             </Text>
         </Grid>
         <Grid xs={24} md={8}>
@@ -19,9 +19,9 @@ export default function Portfolio() {
             <Grid.Container gap={2}>
                 <Grid xs={24} md={12}>
                     <Card className={ styles.card }>
-                        <Text className={ styles.label }>Web</Text>
+                        <Text className={ styles.label }>Front-End</Text>
                         <Text className={ styles.cardText }>
-                            <Text b>HTML, JS, CSS, React, Serverless, TypeScript, GraphQL</Text><br/><br/>
+                            <Text b>UI Design, UX Design, CSS, React, SwiftUI, UIKit, AppKit</Text><br/><br/>
                             <Text b>Usage and examples:</Text><br/>
                             Freelance, Personnal projects, CTO
                         </Text>
@@ -29,9 +29,9 @@ export default function Portfolio() {
                 </Grid>
                 <Grid xs={24} md={12}>
                     <Card className={ styles.card }>
-                        <Text className={ styles.label }>Mobile</Text>
+                        <Text className={ styles.label }>Back-End</Text>
                         <Text className={ styles.cardText }>
-                            <Text b>Swift, iOS, macOS, UIKit, SwiftUI, CloudKit, Xcode</Text><br/><br/>
+                            <Text b>Swift, C & C++, NodeJS, SQL, GraphQL, Web 3.0, Solidity, Rust</Text><br/><br/>
                             <Text b>Usage and examples:</Text><br/>
                             Personnal projects
                         </Text>
@@ -41,7 +41,7 @@ export default function Portfolio() {
                     <Card className={ styles.card }>
                         <Text className={ styles.label }>Other</Text>
                         <Text className={ styles.cardText }>
-                            <Text b>Cryptography, Blockchain, Python, C, Linux, UI Design, UX Design</Text><br/><br/>
+                            <Text b>Python, Git, Linux, AWS, DevOps</Text><br/><br/>
                             <Text b>Usage and examples:</Text><br/>
                             Freelance, CTO, School projects
                         </Text>
