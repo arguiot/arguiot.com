@@ -112,12 +112,12 @@ export default function Portfolio() {
                 </Grid>
                 <Grid xs={24} md={8}>
                     <Card className={ styles.card }>
-                        <img src="/img/cryptool_102x102@1.png" alt="Corona Tracing" className={ classNames(styles.cardImg, styles.darkInvert) }/>
-                        <Text className={ styles.label } align="center"><a href="https://corona-tracing.cryptool.org" target="_blank">Corona Tracing</a></Text>
+                        <img src="/img/aire_102x102@1.png" alt="AIRE Payments" className={ classNames(styles.cardImg, styles.darkInvert) }/>
+                        <Text className={ styles.label } align="center"><a href="https://aire.pr1mer.tech" target="_blank">AIRE Payments</a></Text>
                         <Text className={ styles.cardText } style={{ textAlign: "left "}}>
-                            <Text b>A campaign to raise awareness of tracing applications for COVID.</Text><br/><br/>
-                            <Text b>Success:</Text><br/>
-                            Highlighted by several newspapers, 10M+ visitors.
+                            <Text b>A demo of an internal, real-time payment network for education based on blockchain.</Text><br/><br/>
+                            <Text b>Experience:</Text><br/>
+                            Solid understanding of Ethereum, Web3, and smart contracts
                         </Text>
                     </Card>
                 </Grid>
