@@ -14,7 +14,7 @@ export default function Summary({ contributions = 5000 }) {
         <Grid.Container gap={2} justify="center" wrap="wrap">
             <Grid xs={24} sm={12} md={6}>
                 <div className="feature">
-                    <div className="icon globe" />
+                     <div className="w-16 h-9 icon globe" />
                     <div className="description">
                         <b>Languages Spoken</b><br/>
                         French | English
@@ -23,7 +23,7 @@ export default function Summary({ contributions = 5000 }) {
             </Grid>
             <Grid xs={24} sm={12} md={6}>
                 <div className="feature">
-                    <div className="icon code" />
+                    <div className="w-16 h-9 icon code" />
                     <div className="description">
                         <b>{ Math.round(contributions / 500) * 500 }+ Contributions</b><br/>
                         On open-source projects
@@ -32,7 +32,7 @@ export default function Summary({ contributions = 5000 }) {
             </Grid>
             <Grid xs={24} sm={12} md={6}>
                 <div className="feature">
-                    <div className="icon interest" />
+                    <div className="w-16 h-9 icon interest" />
                     <div className="description">
                         <b>Interested in many fields</b><br/>
                         Economy, Design, Travel, and more!
@@ -41,7 +41,7 @@ export default function Summary({ contributions = 5000 }) {
             </Grid>
             <Grid xs={24} sm={12} md={6}>
                 <div className="feature">
-                    <div className="icon experience" />
+                    <div className="w-16 h-9 icon experience" />
                     <div className="description">
                         <b>{ new Date().getFullYear() - 2016 } years of experience</b><br/>
                         In computer programming
@@ -60,27 +60,27 @@ export default function Summary({ contributions = 5000 }) {
         }
         .globe {
             background: url(/img/globe.svg);
-        }
-        .code {
-            background: url(/img/code.svg);
-        }
-        .interest {
-            background: url(/img/interest.svg);
-        }
-        .experience {
-            background: url(/img/experience.svg);
-        }
-        .icon {
-            width 70px;
-            height: 36px;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
         }
-        @media (prefers-color-scheme: dark) {
-            .icon {
-                filter: invert(1);
-            }
+        .code {
+            background: url(/img/code.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .interest {
+            background: url(/img/interest.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .experience {
+            background: url(/img/experience.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         `}</style>
     </Card>

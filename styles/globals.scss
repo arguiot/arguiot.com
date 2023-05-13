@@ -69,6 +69,10 @@ p.magnify {
 		--footer: #000;
 		--secondary-text: #eee;
 	}
+
+	.icon {
+		filter: invert(100%);
+	}
 }
 
 /* Start purging... */
