@@ -30,13 +30,13 @@ const PostPreview = ({
         <CoverImage link={link} title={title} src={coverImage} />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
-        <Link href={ link }>
-          <a className="hover:underline text-current">{title}</a>
+        <Link className="hover:underline text-current" href={link}>
+          {title}
         </Link>
-        { project && <>
-        <Spacer w={1} inline />
-        <Badge>Project</Badge>
-        </> }
+        {project && <>
+          <Spacer w={1} inline />
+          <Badge>Project</Badge>
+        </>}
       </h3>
       <div className="text-lg mb-4">
         <DateFormatter dateString={date} />

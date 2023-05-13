@@ -27,7 +27,7 @@ function NavBar() {
     return <div className={ navClass }>
                 { router.pathname !== "/" &&
                     <NextLink href="/">
-                    <a><Text b className={ styles.logo }>Arthur <span className={ styles.lastName } >Guiot</span></Text></a>
+                    <Text b className={ styles.logo }>Arthur <span className={ styles.lastName } >Guiot</span></Text>
                 </NextLink>
         }
                 <div className={ styles.menuContainer } style={{ display: state ? "flex" : "none" }}>

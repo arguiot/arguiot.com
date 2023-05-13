@@ -20,8 +20,8 @@ const CoverImage = ({ title, src, link }: Props) => {
   return (
     <div className="sm:mx-0">
       {link ? (
-        <Link href={link}>
-          <a aria-label={title}>{image}</a>
+        <Link href={link} aria-label={title}>
+          {image}
         </Link>
       ) : (
         image

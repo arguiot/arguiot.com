@@ -63,9 +63,9 @@ export default function Home({ allPosts, contributions }) {
 	</Head>
 	<NavBar />
 	<header className={ styles.header } >
-		<NextLink href="/"><a style={{ zIndex: 1000 }}>
+		<NextLink href="/" style={{ zIndex: 1000 }}>
 			<h1 className={ styles.logo } ref={name}>Arthur <Text b>Guiot</Text></h1>
-		</a></NextLink>
+		</NextLink>
 		<p className={ styles.text } ref={text}>
 			I'm a computer science student at <a href="https://floridapoly.edu" target='_blank' style={{ color: "inherit" }}>Florida Polytechnic University</a>. I'm a passionate programmer, and I love to build things and share them with the world. Have fun learning about me and my projects!
 		</p>
