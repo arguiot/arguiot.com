@@ -97,7 +97,7 @@ export default function Home({ allPosts, contributions }) {
                 <Grid xs={24} md={8}>
                     <Card>
                         <Text>Feel generous? Send some Crypto!</Text>
-                        <Description title="Ethereum Adress" content={<Tooltip text="Ethereum Mainnet & Polygon compatible"><Link href="https://etherscan.io/address/0x492804D7740150378BE8d4bBF8ce012C5497DeA9" color underline target="_blank">0x4928...DeA9</Link></Tooltip>} />
+                        <Description title="Ethereum Adress" content={<Tooltip text="Ethereum Mainnet & Polygon compatible"><Link href="https://etherscan.io/address/0xD34FDA64241a3D3ba71041AC4BbFc188d795BF15" color underline target="_blank">0xD34F...BF15</Link></Tooltip>} />
                     </Card>
                 </Grid>
             </Grid.Container>
