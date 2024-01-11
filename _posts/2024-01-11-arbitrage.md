@@ -47,7 +47,7 @@ The crucial steps we undertook to build a robust data gathering process involve:
 
 **4. Building The Graph**: The last step involved synthesising our gathered data into a meaningful framework – a strongly connected directed graph. Nodes represented smart contracts, and edges symbolised function calls between them, effectively identifying potential cycles for PTOO.
 
-![](https://images.pr1mer.tech/arguiot/blog/pyratz/DraggedImage.pdf height=150)
+![](https://images.pr1mer.tech/arguiot/blog/pyratz/DraggedImage.pdf)
 
 One of the principal challenges encountered during this process was efficiency. Our primary issue was the latency present in our initial stack that leveraged TypeScript and Ethers.js. Constraints around a single connection and serial response processing, even with wiser strategies like `Promise.all` or worker threads, it still severely limited our data gathering speed and efficiency, impeding the arbitrage strategy.
 
