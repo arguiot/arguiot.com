@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mint ERC20</h1>
+    <p>Connect your wallet and mint ERC20 tokens on Goerli testnet. I made this because some people forget to verify
+        their contracts...</p>
+    <button id="connect">Connect Wallet</button>
+    <input id="contractAddress" type="text" placeholder="Contract Address">
+    <input id="amount" type="number" placeholder="Amount">
+    <input id="decimals" type="number" placeholder="Decimals">
+    <button id="mint">Mint</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <script>
+
+        let web3;
+        let account;
+
+        // Basic ABI for ERC20 Mint function
+        const erc20ABI = [{
+            "constant": false,
+            "inputs": [{
+                "name": "_to",
+                "type": "address"
+            }, {
+                "name": "_amount",
+                "type": "uint256"
+            }],
+            "name": "mint",
+            "outputs": [],
+            "type": "function"
+        }];
+
+        const connect = async () => {
+            if (window.ethereum) {
+                window.web3 = new Web3(ethereum);
+
+                web3 = window.web3;
+
+                account = (await ethereum.request({ method: 'eth_requestAccounts' }))[0];
+                console.log("Account connected: ", account);
+            }
+            else {
+                console.error("Non-Ethereum browser detected. Consider installing MetaMask");
+            }
+        }
+
+        const mint = async () => {
+            const amount = document.querySelector("#amount").value;
+            const decimals = document.querySelector("#decimals").value;
+            const contractAddress = document.querySelector("#contractAddress").value;
+
+            const contract = new web3.eth.Contract(erc20ABI, contractAddress);
+
+            const mintAmount = web3.utils.toBN(amount * (10 ** decimals));
+
+            contract.methods.mint(account, mintAmount.toString())
+                .send({ from: account })
+                .on('transactionHash', function (hash) {
+                    console.log(`Transaction sent: ${hash}`);
+                })
+                .on('receipt', function (receipt) {
+                    console.log(`Transaction successful, receipt: ${receipt}`);
+                })
+                .on('error', function (error) {
+                    console.log(`Transaction error: ${error}`);
+                });
+        }
+
+        document.querySelector("#connect").addEventListener("click", connect);
+        document.querySelector("#mint").addEventListener("click", mint);
+
+    </script>
+</body>
+
+</html>
