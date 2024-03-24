@@ -1,13 +1,13 @@
 ---
 title: 'A personal guide to evaluate and invest in web3 projects'
 excerpt: 'A brief note to discovering the next big thing in web3 and constructing a risk-efficient portfolio in the medium term.'
-coverImage: 'https://images.pr1mer.tech/arguiot/blog/web3/web3.jpg'
+coverImage: 'https://images.pr1mer.tech/arguiot/blog/web3/blackrock.jpg'
 date: '2024-03-23T06:00:00.322Z'
 author:
   name: Arthur Guiot
   picture: '/img/logo.jpeg'
 ogImage:
-  url: 'https://images.pr1mer.tech/arguiot/blog/web3/web3.jpg'
+  url: 'https://images.pr1mer.tech/arguiot/blog/web3/blackrock.jpg'
 ---
 > This article was written for people with a basic understanding of Web3 in mind. Complete beginners may find this guide useful to look up resources. I am probably not the best person to ask for advice, as I am nor an expert nor a financial advisor. This article is based on my personal experience and should not be taken as financial advice.
 
