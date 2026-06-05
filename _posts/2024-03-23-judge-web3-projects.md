@@ -1,13 +1,13 @@
 ---
 title: "A personal guide to evaluate and invest in web3 projects"
 excerpt: "A brief note to discovering the next big thing in web3 and constructing a risk-efficient portfolio in the medium term."
-coverImage: "https://images.pr1mer.tech/arguiot/blog/web3/blackrock.jpg"
+coverImage: "https://media.pr1mer.tech/arguiot/blog/web3/blackrock.jpg"
 date: "2024-03-23T06:00:00.322Z"
 author:
     name: Arthur Guiot
     picture: "/img/logo.jpeg"
 ogImage:
-    url: "https://images.pr1mer.tech/arguiot/blog/web3/blackrock.jpg"
+    url: "https://media.pr1mer.tech/arguiot/blog/web3/blackrock.jpg"
 ---
 
 > This article was written for people with a basic understanding of Web3 in mind. Complete beginners may find this guide useful to look up resources. I am probably not the best person to ask for advice, as I am nor an expert nor a financial advisor. This article is based on my personal experience and should not be taken as financial advice.
@@ -33,7 +33,7 @@ One key mistake is to think that the blockchain will be a consumer product. The 
 Blockchain is a fantastic global state machine that will eventually serve as the backbone of the global payment system. You should view it as an infrastructure solution. Currently, we pay in Euros or Dollars, not in VisaCoin or MasterCardToken. There is no reason why we cannot continue in this direction. How can we differentiate between projects if none of them will be consumer products? Developer experience.
 
 Today, the absolute gold standard is Ethereum. It's the first mainstream fully programmable blockchain, and it is by far the most [resilient](https://x.com/SolanaStatus/status/1754813351945789491?s=20). The main advantage of Ethereum is that it leads the path when it comes to solving the blockchain trilemmna:
-![Blockchain trilemma](https://images.pr1mer.tech/arguiot/blog/web3/trilemmna.png)
+![Blockchain trilemma](https://media.pr1mer.tech/arguiot/blog/web3/trilemmna.png)
 
 > Good at everything, master at none.
 
@@ -59,10 +59,10 @@ Venture capitalists are smart, but they also have a lot of money to burn. There 
 
 ### Rule 4: Market is easy, it's all offer and demand
 
-![Midwit](https://images.pr1mer.tech/arguiot/blog/web3/midwit.jpg)
-![offer and demand](https://images.pr1mer.tech/arguiot/blog/web3/offer-demand.png)
+![Midwit](https://media.pr1mer.tech/arguiot/blog/web3/midwit.jpg)
+![offer and demand](https://media.pr1mer.tech/arguiot/blog/web3/offer-demand.png)
 Navigating the market is easier than it seems. For long trades, the concept is simple, buy when the supply is high and sell when the demand high. And that's where the "market psychology" comes in:
-![market psychology](https://images.pr1mer.tech/arguiot/blog/web3/psychology.png)
+![market psychology](https://media.pr1mer.tech/arguiot/blog/web3/psychology.png)
 That's why most people lose money on markets, it's because they arrive when everybody thinks the price is going up. There is a big demand, therefore prices indeed go up, but suddenly after, all the holders start selling and the market crashes.
 
 On the otherside, it's really hard to invest when the price is low, because there is still a possibility for the price to go down even more (price is low -\> no demand -\> price goes down even more). In the crypto market, people tend to rely on Bitcoin and Ethereum a lot more during the bear market. A good signal may be when the retails (normal people) are out, but institutions are still in.

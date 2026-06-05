@@ -1,18 +1,18 @@
 ---
 title: 'Unlocking DeFi Profits with Cyclical Arbitrage'
 excerpt: 'Part of my internship at PyratzLabs was to engineer a cyclical arbitrage bot for DeFi. Cyclical arbitrage shines in its ability to repeatedly utilise opportunities within uniquely characterised swap loops. This approach impressively expands the frontier of regular arbitrage strategies available in the conventional financial market.'
-coverImage: 'https://images.pr1mer.tech/arguiot/blog/pyratz/shubham-dhage-208asI7iZiU-unsplash.jpg'
+coverImage: 'https://media.pr1mer.tech/arguiot/blog/pyratz/shubham-dhage-208asI7iZiU-unsplash.jpg'
 date: '2024-01-11T06:00:00.322Z'
 author:
   name: Arthur Guiot
   picture: '/img/logo.jpeg'
 ogImage:
-  url: 'https://images.pr1mer.tech/arguiot/blog/pyratz/shubham-dhage-208asI7iZiU-unsplash.jpg'
+  url: 'https://media.pr1mer.tech/arguiot/blog/pyratz/shubham-dhage-208asI7iZiU-unsplash.jpg'
 ---
 ## Introduction
 In the dynamic world of Decentralised Finance (DeFi), intricate and interlinked protocols have opened new possibility vectors for algorithmic trading. Cyclical arbitrage emerges as one such innovative strategy, leveraging the distinctive character of DeFi. Rather than simply capitalising on price discrepancies between two markets or tokens, cyclical arbitrage employs a more complex approach. It examines and exploits potential profit opportunities found in intricate cycles of tokens and protocols.
 
-![Example of a cycle](https://images.pr1mer.tech/arguiot/blog/pyratz/DraggedImage.png)
+![Example of a cycle](https://media.pr1mer.tech/arguiot/blog/pyratz/DraggedImage.png)
 
 Cyclical arbitrage shines in its ability to repeatedly utilise opportunities within uniquely characterised swap loops. This approach impressively expands the frontier of regular arbitrage strategies available in the conventional financial market.
 
@@ -34,7 +34,7 @@ As we progress with the theory, it is important to note that the speed of discov
 This theoretical framework, drawn from established research [1](https://arxiv.org/pdf/2103.02228.pdf), serves as the foundation of our exploration into the profitable yet intricate world of cyclical arbitrage in DeFi.
 
 ## 2. Data gathering
-![](https://images.pr1mer.tech/arguiot/blog/pyratz/Interface.jpg)
+![](https://media.pr1mer.tech/arguiot/blog/pyratz/Interface.jpg)
 Acquiring data for the just-in-time discovery process is a multifaceted operation and forms the backbone of cyclical arbitrage strategy. Performance in data gathering is crucial, as variations in data could mean the difference between identifying a profitable cycle and overlooking an opportunity. 
 
 The crucial steps we undertook to build a robust data gathering process involve:
@@ -47,7 +47,7 @@ The crucial steps we undertook to build a robust data gathering process involve:
 
 **4. Building The Graph**: The last step involved synthesising our gathered data into a meaningful framework – a strongly connected directed graph. Nodes represented smart contracts, and edges symbolised function calls between them, effectively identifying potential cycles for PTOO.
 
-![](https://images.pr1mer.tech/arguiot/blog/pyratz/DraggedImage.pdf)
+![](https://media.pr1mer.tech/arguiot/blog/pyratz/DraggedImage.pdf)
 
 One of the principal challenges encountered during this process was efficiency. Our primary issue was the latency present in our initial stack that leveraged TypeScript and Ethers.js. Constraints around a single connection and serial response processing, even with wiser strategies like `Promise.all` or worker threads, it still severely limited our data gathering speed and efficiency, impeding the arbitrage strategy.
 
@@ -88,7 +88,7 @@ By utilising this system, we edge closer to making cyclical arbitrage an easily 
 ## Demo Time
 At this point, theory and process have manifested into a potent mechanism for realising consistent returns. To truly encapsulate its capability, we need to put this system to the test. Our testnet demo provides a real-time execution of the bot, displaying how the entire strategy comes to life.
 
-![](https://images.pr1mer.tech/arguiot/blog/pyratz/arbitrage_bot_demo.gif)
+![](https://media.pr1mer.tech/arguiot/blog/pyratz/arbitrage_bot_demo.gif)
 
 In one such testnet demo, we successfully showcased the potential the bot holds. Enacting the cyclical arbitrage strategy, the bot was capable of doubling the entered amount in a single trade! That's the dynamism of DeFi and the power of cyclical arbitrage materialised.
 
