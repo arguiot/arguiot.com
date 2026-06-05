@@ -1,5 +1,9 @@
 @tailwind base;
 
+#nprogress .bar {
+	background: var(--text-color);
+}
+
 html,
 body {
 	padding: 0;

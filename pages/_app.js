@@ -1,7 +1,13 @@
 import '../styles/globals.scss'
+import 'nprogress/nprogress.css'
 import { GeistProvider, CssBaseline, useTheme } from '@geist-ui/react'
 import React from "react";
-import NextNProgress from 'nextjs-progressbar';
+import Router from 'next/router'
+import NProgress from 'nprogress'
+
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 function MyApp({ Component, pageProps }) {
   const [themeType, setThemeType] = React.useState('light')
@@ -33,7 +39,6 @@ function MyApp({ Component, pageProps }) {
 		}}>
       <CssBaseline />
       <Component {...pageProps} />
-      <NextNProgress color="var(--text-color)" />
     </GeistProvider>
   )
 }
